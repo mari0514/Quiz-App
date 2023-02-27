@@ -16,34 +16,25 @@
 
 <body>
     <header>
-        <div id="row">
-            <div id="brand">Website Name</div>
-            <div id="menu">
-                <ul>
-                    <li><a href="/" class="active">Home</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/signin.html">&#x26d4;</a></li>
-                </ul>
-            </div>
-            <div id="account"></div>
+        <div id="menu">
+            <button><a href="/signin.html">Sign In</a></button>
+            <button><a href="/signup.html">Sign Up</a></button>
+            <button>Log Out</button>
         </div>
+        <div id="account"></div>
     </header>
 
-    <main>        
-        <h2>main section</h2>
-    </main>
 
 
     <div class="container mt-5">
-        <h5 class="card-text float-right font-weight-bold">Total Time : <br> (00: <span id="time">00</span>)</h5>
+        <h5 class="card-text float-right font-weight-bold">Total Time : <br> 00: <span id="time">00</span></h5>
 
         <!-- First Page -->
         <div class="row d-flex justify-content-center">
             <div class="col-md-8 border p-4">
                 <div class="card-body">
-                    <h5 class="card-text float-right font-weight-bold">MC Quiz</h5>
-                    <h5>(<span id="number">0</span> of 20)</h5>
+                    <h5 class="card-text float-right font-weight-bold">Fun Quiz</h5>
+                    <h5><span id="number">0</span> of 5</h5>
                 </div>
                 <hr>
 
@@ -78,7 +69,7 @@
                 <!-- Result Page -->
                 <div id="Result">
                     <!-- <h3 class="mt-5 display-4">Marks: <span id="marks"></span>/ 100</h3> -->
-                    <h3 class="mt-4"><span id="correct-answer"></span> Correct out of 20</h3>
+                    <h3 class="mt-4"><span id="correct-answer"></span> Correct out of 5</h3>
                     <h3 class="mt-4">Result: <span id="percentage">%</span></h3>
 
                 </div>
@@ -99,7 +90,7 @@
         // Variables
 
         let count = 0;
-        let time = 45;
+        let time = 30;
         let marks = 0;
         let answer = [];
         let timer;
@@ -117,7 +108,7 @@
             function buttonsManager() {
                 if (count > 0) {
                     $('#prev').show();
-                    if (count == 19) {
+                    if (count == 4) {
                         $('#next').hide();
                         $('#finish').show();
                     } else {
@@ -163,7 +154,7 @@
 
                 // $('#marks').text(marks);
                 $('#correct-answer').text(marks / 5);
-                $('#percentage').text(marks + '%');
+                $('#percentage').text(marks * 4 + '%');
 
                 $('#Result').show();
 
