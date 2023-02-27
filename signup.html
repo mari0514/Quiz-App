@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+    <main>
+        <i class="fa-solid fa-xmark"></i>
+        <div class="form-section">
+            <div class="form-section-contents">
+                <h2>Sign Up</h2>
+                <form role="form" onsubmit="signUp(event);" autocomplete="off">
+                    <div class="form-group">
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </form>
+                <p>Already a member? <a href="/signin.html">Log in</a> and enjoy!</p>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
