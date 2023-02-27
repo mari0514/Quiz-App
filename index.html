@@ -17,12 +17,16 @@
 <body>
     <header>
         <div id="menu">
-            <button><a href="/signin.html">Sign In</a></button>
-            <button><a href="/signup.html">Sign Up</a></button>
-            <button>Log Out</button>
+            <button id="signin-btn"><a href="/signin.html">Sign In</a></button>
+            <button id="signup-btn"><a href="/signup.html">Sign Up</a></button>
+            <button id="logout-btn">Log Out</button>
         </div>
-        <div id="account"></div>
+        <!-- <div id="account"></div> -->
     </header>
+
+    <div id="greeting" class="d-flex justify-content-center">
+        <h2>Welcome, First Last!</h2>
+    </div>
 
 
 
@@ -71,6 +75,11 @@
                     <!-- <h3 class="mt-5 display-4">Marks: <span id="marks"></span>/ 100</h3> -->
                     <h3 class="mt-4"><span id="correct-answer"></span> Correct out of 5</h3>
                     <h3 class="mt-4">Result: <span id="percentage">%</span></h3>
+
+                    <div class="d-flex justify-content-space-between">
+                        <button id="restart-btn" class="btn btn-success btn-lg mx-auto">Restart</button>
+                        <button id="logout-btn" class="btn btn-danger btn-lg mx-auto"><a href="/signin.html">Log Out</a></button>
+                    </div>
 
                 </div>
 
