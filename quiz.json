@@ -1,0 +1,111 @@
+{
+    "Questions": [
+        {
+            "category": "Film & TV",
+            "id": "622a1c377cc59eab6f9507ad",
+            "correctAnswer": "Tom Hanks",
+            "incorrectAnswers": [
+                "Ewan McGregor",
+                "Will Smith",
+                "Tom Cruise"
+            ],
+            "question": "Which actor has featured in films including Forrest Gump and Apollo 13?",
+            "tags": [
+                "film",
+                "acting",
+                "film_and_tv"
+            ],
+            "type": "Multiple Choice",
+            "difficulty": "easy",
+            "regions": [],
+            "isNiche": false
+        },
+        {
+            "category": "Film & TV",
+            "id": "622a1c347cc59eab6f94fc2d",
+            "correctAnswer": "\"You're gonna need a bigger boat.\"",
+            "incorrectAnswers": [
+                "\"A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti.\"",
+                "\"Wait a minute, wait a minute. You ain't heard nothin' yet!\"",
+                "\"Mother of mercy, is this the end of Rico?\""
+            ],
+            "question": "Which of these quotes is from the film 'Jaws'?",
+            "tags": [
+                "quotes",
+                "film",
+                "general_knowledge",
+                "film_and_tv"
+            ],
+            "type": "Multiple Choice",
+            "difficulty": "easy",
+            "regions": [],
+            "isNiche": false
+        },
+        {
+            "category": "Film & TV",
+            "id": "625698849da29df7b05f728c",
+            "correctAnswer": "Spiderman",
+            "incorrectAnswers": [
+                "Obadiah Stane",
+                "Iron Man",
+                "Hawkeye"
+            ],
+            "question": "In the Marvel Cinematic Unvierse, which character is played by Tom Holland?",
+            "tags": [
+                "mcu",
+                "film",
+                "acting",
+                "marvel",
+                "comics",
+                "film_and_tv"
+            ],
+            "type": "Multiple Choice",
+            "difficulty": "easy",
+            "regions": [],
+            "isNiche": false
+        },
+        {
+            "category": "Film & TV",
+            "id": "622a1c347cc59eab6f94fbbf",
+            "correctAnswer": "\"Just keep swimming.\"",
+            "incorrectAnswers": [
+                "\"Tell 'em to go out there with all they got and win just one for the Gipper.\"",
+                "\"We'll always have Paris.\"",
+                "\"Today, I consider myself the luckiest man on the face of the earth.\""
+            ],
+            "question": "Which of these quotes is from the film 'Finding Nemo'?",
+            "tags": [
+                "quotes",
+                "film",
+                "film_and_tv"
+            ],
+            "type": "Multiple Choice",
+            "difficulty": "easy",
+            "regions": [],
+            "isNiche": false
+        },
+        {
+            "category": "Film & TV",
+            "id": "6256989c9da29df7b05f7292",
+            "correctAnswer": "Benedict Cumberbatch",
+            "incorrectAnswers": [
+                "Jeff Goldblum",
+                "J.K. Simmons",
+                "Michael Douglas"
+            ],
+            "question": "Which actor plays the role of Dr Strange in the Marvel Cinematic Universe?",
+            "tags": [
+                "mcu",
+                "film",
+                "acting",
+                "marvel",
+                "comics",
+                "film_and_tv"
+            ],
+            "type": "Multiple Choice",
+            "difficulty": "easy",
+            "regions": [],
+            "isNiche": false
+        }
+    ]
+}
