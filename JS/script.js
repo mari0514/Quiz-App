@@ -10,7 +10,7 @@ let timer;
 
 $(document).ready(function(){
     $('#finish').hide();
-    $('#Result').hide();
+    $('#result').hide();
 
     buttonsManager();
 
@@ -66,7 +66,7 @@ $(document).ready(function(){
         $('#correct-answer').text(marks / 5);
         $('#percentage').text(marks * 4 + '%');
 
-        $('#Result').show();
+        $('#result').show();
 
     }
     $('#options').hide();
@@ -101,7 +101,7 @@ $(document).ready(function(){
                     alert('Oops, seems like you\'re out of your time');
                     createResult(data);
                     $('#main').hide();
-                    $('#Result').show();
+                    $('#result').show();
                 }
                 time--;
             }
