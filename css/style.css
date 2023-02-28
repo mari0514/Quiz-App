@@ -1,7 +1,86 @@
+.btn-primary {
+  background-color: #beabfa;
+  border-color: #beabfa;
+}
+
+.btn-primary:hover, .btn-primary.active {
+  background-color: #beabfa;
+  border-color: #beabfa;
+}
+
+.btn-outline-primary {
+  border-color: #beabfa;
+  color: #beabfa;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary.active {
+  border-color: #beabfa;
+  background-color: #beabfa;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #f68686;
+  border-color: #f68686;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #f68686;
+  border-color: #f68686;
+  color: #fff;
+}
+
 * {
-  margin: 0; }
+  margin: 0;
+}
 
 body {
-  font-family: "Poppins"; }
+  font-family: "Poppins";
+  background-image: url("/assets/background-image.png");
+  background-size: cover;
+}
 
+button:hover {
+  cursor: pointer;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
+}
+
+button:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#menu {
+  margin: 24px;
+}
+
+#greet {
+  font-family: "Shrikhand";
+  color: #fff;
+  text-shadow: 5px 5px #beabfa;
+}
+
+.container {
+  padding: 24px 0;
+  background-color: #fff;
+}
+
+.container h6 {
+  font-size: 18px;
+}
+
+.container #finish {
+  background-color: #5788fa;
+  border-color: #5788fa;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */

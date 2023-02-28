@@ -1,9 +1,10 @@
 body {
+    font-family: "Poppins";
     width: 100vw;  
     // background-image: url("../assets/form-background-image.jpg");
     // background-size: auto;
     // background-repeat: no-repeat;
-    background: linear-gradient(45deg, #f07c58, #eb4685, #37b4e2, #2fe0b7);
+    background: linear-gradient(45deg, #f07c58, #f05590, #37b4e2, #2fe0b7);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;

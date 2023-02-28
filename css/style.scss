@@ -1,7 +1,89 @@
+// colors
+$primary: #beabfa;
+.btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+    &:hover,
+    &.active {
+        background-color: $primary;
+        border-color: $primary;
+    }
+}
+.btn-outline-primary {
+    // background-color: $primary;
+    border-color: $primary;
+    color: $primary;
+    &:hover,
+    &.active {
+        border-color: $primary;
+        background-color: $primary;
+        color: #fff;
+    }
+}
+
+$danger: #f68686;
+.btn-danger {
+    background-color: $danger;
+    border-color: $danger;
+    color: #fff;
+    &:hover {
+        background-color: $danger;
+        border-color: $danger;
+        color: #fff;
+    }
+}
+
+
+/* finally, import Bootstrap */
+@import "bootstrap";
+
+// styles
+
 * {
     margin: 0;
 }
 
 body {
     font-family: "Poppins";
+    background-image: url("/assets/background-image.png");
+    background-size: cover;
+}
+
+button {
+    &:hover {
+        cursor: pointer;
+        transition-duration: .3s;
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    &:active {
+        transform: scale(1);
+    }
+}
+
+#menu {
+    margin: 24px;
+}
+
+#greet {
+    font-family: "Shrikhand";
+    color: #fff;
+    text-shadow: 5px 5px $primary;
+}
+
+.container {
+    padding: 24px 0;
+    background-color: #fff;
+    h6 {
+        font-size: 18px;
+    }
+    #finish {
+        background-color: #5788fa;
+        border-color: #5788fa;
+        color: #fff;
+    }
+}
+
+footer {
+    text-align: center;
 }

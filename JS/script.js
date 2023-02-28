@@ -1,7 +1,7 @@
 // Variables
 
 let count = 0;
-let time = 30;
+let time = 45;
 let marks = 0;
 let answer = [];
 let timer;
@@ -41,7 +41,6 @@ $(document).ready(function(){
         $('#option4').text(data[i].incorrectAnswers[2]);
         $('#number').text(Number(i+1));
 
-
     }
 
     // Answer Function
@@ -74,15 +73,22 @@ $(document).ready(function(){
 
 
     // Attaching API
-    fetch('quiz.json')
+    let API = "https://the-trivia-api.com/api/questions?categories=film_and_tv&limit=5&difficulty=easy";
+    // fetch('quiz.json')
+    fetch(API,
+    {
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
     .then(function(response) {
         return response.json();
     })
     .then(function(data) {
         $('#btn').click(function() {
-            // console.log(data.Questions);
             $('#options').show();
-            addingQuestions(data.Questions, count);
+            // addingQuestions(data.Questions, count);
+            addingQuestions(data, count);
             $('#start_page').hide();
             $('#prev').hide();
 
@@ -118,7 +124,8 @@ $(document).ready(function(){
                 alert('Please choose one option');
             } else {
                 count++;
-                addingQuestions(data.Questions, count);
+                // addingQuestions(data.Questions, count);
+                addingQuestions(data, count);
                 $('#prev').show();
                 $('.option').removeClass("active");
                 buttonsManager();
@@ -132,7 +139,8 @@ $(document).ready(function(){
 
         $('#prev').click(function() {
             count--;
-            addingQuestions(data.Questions, count);
+            // addingQuestions(data.Questions, count);
+            addingQuestions(data, count);
             buttonsManager();
             selectedAnswer();
         });
