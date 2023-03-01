@@ -31,6 +31,7 @@
   color: #fff;
 }
 
+/* finally, import Bootstrap */
 * {
   margin: 0;
 }
@@ -39,6 +40,7 @@ body {
   font-family: "Poppins";
   background-image: url("/assets/background-image.png");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 button:hover {
@@ -82,5 +84,11 @@ button:active {
 
 footer {
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    opacity: 0.8;
+  }
 }
 /*# sourceMappingURL=style.css.map */
