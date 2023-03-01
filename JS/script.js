@@ -15,6 +15,9 @@ $(document).ready(function(){
 
     buttonsManager();
 
+    $('#greetFirstName').text(JSON.parse(localStorage.getItem('formData'))[0].firstName);
+    $('#greetLastName').text(JSON.parse(localStorage.getItem('formData'))[0].lastName);
+
 
     // prev, next, finish buttons
 
