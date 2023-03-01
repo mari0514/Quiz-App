@@ -35,7 +35,7 @@ $danger: #f68686;
 
 
 /* finally, import Bootstrap */
-@import "bootstrap";
+// @import "bootstrap";
 
 // styles
 
@@ -46,7 +46,9 @@ $danger: #f68686;
 body {
     font-family: "Poppins";
     background-image: url("/assets/background-image.png");
+    // background-image: url("/assets/background-image-new.png");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 button {
@@ -94,4 +96,15 @@ button {
 
 footer {
     text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #greet {
+        h1 {
+            font-size: 32px;
+        }
+    }
+    .container {
+        opacity: 0.8;
+    }
 }
