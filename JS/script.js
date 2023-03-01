@@ -6,6 +6,7 @@ let marks = 0;
 let answer = [];
 let timer;
 
+
 // Main ready functions
 
 $(document).ready(function(){
@@ -185,8 +186,6 @@ $(document).ready(function(){
         });
 
     })
-
-
 
 })
 
