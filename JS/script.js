@@ -33,14 +33,30 @@ $(document).ready(function(){
     }
 
 
-    // display the questions by using the data from API
+    // display the questions/answers by using the data from API
     
     function addingQuestions(data, i) {
+        // ramdomly shuffling answer options
+        const shuffle = ([...arr]) => {
+            for (let i = arr.length - 1; i >= 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+        let options = [data[i].correctAnswer, data[i].incorrectAnswers[0], data[i].incorrectAnswers[1], data[i].incorrectAnswers[2]];
+        let shuffledOptions = shuffle(options);
+
+
         $('#question').text(data[i].question);
-        $('#option1').text(data[i].correctAnswer);
-        $('#option2').text(data[i].incorrectAnswers[0]);
-        $('#option3').text(data[i].incorrectAnswers[1]);
-        $('#option4').text(data[i].incorrectAnswers[2]);
+        // $('#option1').text(data[i].correctAnswer);
+        // $('#option2').text(data[i].incorrectAnswers[0]);
+        // $('#option3').text(data[i].incorrectAnswers[1]);
+        // $('#option4').text(data[i].incorrectAnswers[2]);
+        $('#option1').text(shuffledOptions[0]);
+        $('#option2').text(shuffledOptions[1]);
+        $('#option3').text(shuffledOptions[2]);
+        $('#option4').text(shuffledOptions[3]);
         $('#number').text(Number(i + 1));
 
     }
