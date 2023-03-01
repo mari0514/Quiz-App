@@ -79,10 +79,18 @@ button {
     h6 {
         font-size: 18px;
     }
-    #finish {
-        background-color: #5788fa;
-        border-color: #5788fa;
-        color: #fff;
+    #main {
+        #finish {
+            background-color: #5788fa;
+            border-color: #5788fa;
+            color: #fff;
+        }
+    }
+    #result {
+        #message {
+            font-family: 'Pacifico';
+            font-size: 36px;
+        }
     }
 }
 

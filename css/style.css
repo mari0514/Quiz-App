@@ -76,10 +76,15 @@ button:active {
   font-size: 18px;
 }
 
-.container #finish {
+.container #main #finish {
   background-color: #5788fa;
   border-color: #5788fa;
   color: #fff;
+}
+
+.container #result #message {
+  font-family: 'Pacifico';
+  font-size: 36px;
 }
 
 footer {

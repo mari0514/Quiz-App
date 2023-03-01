@@ -1,7 +1,7 @@
 // Variables
 
 let count = 0;
-let time = 45;
+let time = 10;
 let marks = 0;
 let answer = [];
 let timer;
@@ -14,7 +14,8 @@ $(document).ready(function(){
 
     buttonsManager();
 
-    // functions
+
+    // prev, next, finish buttons
 
     function buttonsManager() {
         if (count > 0) {
@@ -31,7 +32,7 @@ $(document).ready(function(){
     }
 
 
-    // Question function
+    // display the questions by using the data from API
     
     function addingQuestions(data, i) {
         $('#question').text(data[i].question);
@@ -39,11 +40,13 @@ $(document).ready(function(){
         $('#option2').text(data[i].incorrectAnswers[0]);
         $('#option3').text(data[i].incorrectAnswers[1]);
         $('#option4').text(data[i].incorrectAnswers[2]);
-        $('#number').text(Number(i+1));
+        $('#number').text(Number(i + 1));
 
     }
 
-    // Answer Function
+
+    // select one option
+
     function selectedAnswer() {
         for (let i = 0; i < 4; i++) {
             let a = document.getElementById("options").children;
@@ -56,15 +59,19 @@ $(document).ready(function(){
     }
 
 
+    // create the result by judging if the user chose the correct answer or not
+
     function createResult(data) {
         for (let i = 0; i < answer.length; i++) {
-            marks += 5;
+            console.log(i + ': ' + answer[i]);
+            if (answer[i] == data[i].correctAnswer) {
+                marks++;
+            }
         }
         $('#main').hide();
 
-        // $('#marks').text(marks);
-        $('#correct-answer').text(marks / 5);
-        $('#percentage').text(marks * 4 + '%');
+        $('#correct-answer').text(marks);
+        $('#percentage').text(marks * 20 + '%');
 
         $('#result').show();
 
@@ -73,6 +80,7 @@ $(document).ready(function(){
 
 
     // Attaching API
+
     let API = "https://the-trivia-api.com/api/questions?categories=film_and_tv&limit=5&difficulty=easy";
     // fetch('quiz.json')
     fetch(API,
@@ -95,29 +103,36 @@ $(document).ready(function(){
             timer = setInterval(timerFunction, 1000);
 
             function timerFunction() {
-                $('#time').text(time);
-                if (timer < 1) {
+                if (time < 10 && time > 0) {
+                    $('#time').text('0' + time);
+                } else if (time == 0) {
+                    $('#time').text('00');
+                    $('.time').css('color', 'red');
+                } else if (time < 0) {
                     clearInterval(timer);
-                    alert('Oops, seems like you\'re out of your time');
+                    // alert('Oops, seems like you\'re out of your time');
+                    $('#message').text('Oops, seems like you\'re out of time...');
                     createResult(data);
                     $('#main').hide();
                     $('#result').show();
+                } else {
+                    $('#time').text(time);
                 }
                 time--;
             }
         });
 
+
         // selecting option
 
         $('.option').click(function() {
-
             $(this).addClass("active");
             $(this).siblings().removeClass("active");
             answer[count] = $(this).html();
         });
 
 
-        // next question
+        // moving to the next question
 
         $('#next').click(function() {
             if (count > answer.length - 1) {
@@ -134,8 +149,7 @@ $(document).ready(function(){
         });
 
 
-
-        // previous question
+        // moving to the previous question
 
         $('#prev').click(function() {
             count--;
@@ -153,6 +167,19 @@ $(document).ready(function(){
                 alert('Please select an option');
             } else {
                 createResult(data);
+                if (marks == 5) {
+                    // 5
+                    $('#message').text('Excellent job, well done!');
+                } else if (marks > 3) {
+                    // 4
+                    $('#message').text('Close enough, keep up the good work!');
+                } else if (marks > 1) {
+                    // 3, 2
+                    $('#message').text('You\'re doing just fine!')
+                } else  {
+                    // 1, 0
+                    $('#message').text('Try harder!')
+                }
                 clearInterval(timer);
             }
         });
