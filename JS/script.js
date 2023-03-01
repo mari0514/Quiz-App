@@ -172,8 +172,9 @@ $(document).ready(function(){
                     // 5
                     if (JSON.parse(localStorage.getItem('formData')).length != 0) {
                         $('#message').text('Excellent job, ' + firstName + ' !');
+                    } else {
+                        $('#message').text('Excellent job, well done!');
                     }
-                    $('#message').text('Excellent job, well done!');
                 } else if (marks > 3) {
                     // 4
                     $('#message').text('Close enough, keep up the good work!');
