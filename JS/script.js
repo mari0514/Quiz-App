@@ -6,13 +6,6 @@ let marks = 0;
 let answer = [];
 let timer;
 
-if (JSON.parse(localStorage.getItem('formData')).length != 0) {
-    let firstName = JSON.parse(localStorage.getItem('formData'))[0].firstName;
-    let lastName = JSON.parse(localStorage.getItem('formData'))[0].lastName;
-    $('#greetFirstName').text(', ' + firstName);
-    $('#greetLastName').text(lastName + ' ');
-}
-
 
 // Main ready functions
 
@@ -178,7 +171,7 @@ $(document).ready(function(){
                 if (marks == 5) {
                     // 5
                     if (JSON.parse(localStorage.getItem('formData')).length != 0) {
-                        $('#message').text('Excellent job, ' + firstName + ' !');
+                        $('#message').text('Excellent job, ' + JSON.parse(localStorage.getItem('formData'))[0].firstName + ' !');
                     } else {
                         $('#message').text('Excellent job, well done!');
                     }
@@ -199,6 +192,10 @@ $(document).ready(function(){
     })
 
 })
-
+if (JSON.parse(localStorage.getItem('formData')).length != 0) {
+    let firstName = JSON.parse(localStorage.getItem('formData'))[0].firstName;
+    let lastName = JSON.parse(localStorage.getItem('formData'))[0].lastName;
+    $('#greetName').text(', ' + firstName + ' ' + lastName + ' ');
+}
 
 
