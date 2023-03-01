@@ -6,6 +6,9 @@ let marks = 0;
 let answer = [];
 let timer;
 
+let firstName = JSON.parse(localStorage.getItem('formData'))[0].firstName;
+let lastName = JSON.parse(localStorage.getItem('formData'))[0].lastName;
+
 
 // Main ready functions
 
@@ -170,7 +173,7 @@ $(document).ready(function(){
                 createResult(data);
                 if (marks == 5) {
                     // 5
-                    $('#message').text('Excellent job, well done!');
+                    $('#message').text('Excellent job, ' + firstName + ' !');
                 } else if (marks > 3) {
                     // 4
                     $('#message').text('Close enough, keep up the good work!');
@@ -189,5 +192,5 @@ $(document).ready(function(){
 
 })
 
-$('#greetFirstName').text(', ' + JSON.parse(localStorage.getItem('formData'))[0].firstName);
-$('#greetLastName').text(JSON.parse(localStorage.getItem('formData'))[0].lastName + ' ');
+$('#greetFirstName').text(', ' + firstName);
+$('#greetLastName').text(lastName + ' ');
