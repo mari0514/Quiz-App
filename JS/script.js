@@ -170,7 +170,10 @@ $(document).ready(function(){
                 createResult(data);
                 if (marks == 5) {
                     // 5
-                    $('#message').text('Excellent job, ' + firstName + ' !');
+                    if (JSON.parse(localStorage.getItem('formData')).length != 0) {
+                        $('#message').text('Excellent job, ' + firstName + ' !');
+                    }
+                    $('#message').text('Excellent job, well done!');
                 } else if (marks > 3) {
                     // 4
                     $('#message').text('Close enough, keep up the good work!');
