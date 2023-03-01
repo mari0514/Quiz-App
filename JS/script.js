@@ -191,8 +191,8 @@ $(document).ready(function(){
 if (JSON.parse(localStorage.getItem('formData')).length != 0) {
     let firstName = JSON.parse(localStorage.getItem('formData'))[0].firstName;
     let lastName = JSON.parse(localStorage.getItem('formData'))[0].lastName;
+    $('#greetFirstName').text(', ' + firstName);
+    $('#greetLastName').text(lastName + ' ');
 }
 
 
-$('#greetFirstName').text(', ' + firstName);
-$('#greetLastName').text(lastName + ' ');
