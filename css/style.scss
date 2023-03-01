@@ -91,6 +91,11 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+    #greet {
+        h1 {
+            font-size: 32px;
+        }
+    }
     .container {
         opacity: 0.8;
     }
