@@ -1,7 +1,7 @@
 // Variables
 
 let count = 0;
-let time = 30;
+let time = 45;
 let marks = 0;
 let answer = [];
 let timer;
