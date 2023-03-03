@@ -4,6 +4,7 @@ let count = 0;
 let time = 45;
 let marks = 0;
 let answer = [];
+let question = [];
 let timer;
 
 
@@ -12,6 +13,7 @@ let timer;
 $(document).ready(function(){
     $('#finish').hide();
     $('#result').hide();
+    $('#detailedResult').hide();
 
     buttonsManager();
 
@@ -80,7 +82,7 @@ $(document).ready(function(){
 
     function createResult(data) {
         for (let i = 0; i < answer.length; i++) {
-            console.log(i + ': ' + answer[i]);
+            // console.log(i + ': ' + answer[i]);
             if (answer[i] == data[i].correctAnswer) {
                 marks++;
             }
@@ -89,6 +91,32 @@ $(document).ready(function(){
 
         $('#correct-answer').text(marks);
         $('#percentage').text(marks * 20 + '%');
+
+        $('#view-btn').click(function() {
+            $('#view-btn').hide();
+            $('#question1InResultPage').text(question[0]);
+            $('#correctAnswer1').text(data[0].correctAnswer);
+            $('#usersAnswer1').text(answer[0]);
+            $('#question2InResultPage').text(question[1]);
+            $('#correctAnswer2').text(data[1].correctAnswer);
+            $('#usersAnswer2').text(answer[1]);
+            $('#question3InResultPage').text(question[2]);
+            $('#correctAnswer3').text(data[2].correctAnswer);
+            $('#usersAnswer3').text(answer[2]);
+            $('#question4InResultPage').text(question[3]);
+            $('#correctAnswer4').text(data[3].correctAnswer);
+            $('#usersAnswer4').text(answer[3]);
+            $('#question5InResultPage').text(question[4]);
+            $('#correctAnswer5').text(data[4].correctAnswer);
+            $('#usersAnswer5').text(answer[4]);
+            for (let i = 0; i < answer.length; i++) {
+                if (answer[i] != data[i].correctAnswer) {
+                    $('#usersAnswer' + (i + 1)).css('color', '#f68686');
+                }
+            }
+            $('#detailedResult').show();
+        })
+
 
         $('#result').show();
 
@@ -146,6 +174,7 @@ $(document).ready(function(){
             $(this).addClass("active");
             $(this).siblings().removeClass("active");
             answer[count] = $(this).html();
+            question[count] = $('#question').html();
         });
 
 
@@ -204,6 +233,7 @@ $(document).ready(function(){
     })
 
 })
+
 if (JSON.parse(localStorage.getItem('formData')).length != 0) {
     let firstName = JSON.parse(localStorage.getItem('formData'))[0].firstName;
     let lastName = JSON.parse(localStorage.getItem('formData'))[0].lastName;

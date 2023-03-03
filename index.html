@@ -82,8 +82,28 @@
                     <h3 class="mt-4 text-center">You've got <span id="correct-answer"></span> out of 5</h3>
                     <h3 class="mt-4 mb-5 text-center">Result: <span id="percentage">%</span></h3>
 
+                    <!-- Detailed Result Page -->
+                    <div id="detailedResult">
+                        <h5 class="border border-info rounded p-3">Question 1: "<span id="question1InResultPage"></span>"</h5>
+                        <p class="text-center mt-3">Correct answer: <span id="correctAnswer1"></span></p>
+                        <p class="text-center mb-3">Your answer: <span id="usersAnswer1"></span></p>
+                        <h5 class="border border-info rounded p-3">Question 2: <span id="question2InResultPage"></span></h5>
+                        <p class="text-center mt-3">Correct answer: <span id="correctAnswer2"></span></p>
+                        <p class="text-center mb-3">Your answer: <span id="usersAnswer2"></span></p>
+                        <h5 class="border border-info rounded p-3">Question 3 <span id="question3InResultPage"></span></h5>
+                        <p class="text-center mt-3">Correct answer: <span id="correctAnswer3"></span></p>
+                        <p class="text-center mb-3">Your answer: <span id="usersAnswer3"></span></p>
+                        <h5 class="border border-info rounded p-3">Question 4: <span id="question4InResultPage"></span></h5>
+                        <p class="text-center mt-3">Correct answer: <span id="correctAnswer4"></span></p>
+                        <p class="text-center mb-3">Your answer: <span id="usersAnswer4"></span></p>
+                        <h5 class="border border-info rounded p-3">Question 5: <span id="question5InResultPage"></span></h5>
+                        <p class="text-center mt-3">Correct answer: <span id="correctAnswer5"></span></p>
+                        <p class="text-center mb-5">Your answer: <span id="usersAnswer5"></span></p>
+                    </div>
+
                     <div class="d-flex justify-content-space-between">
                         <button id="restart-btn" class="btn btn-primary btn-lg mx-auto" onclick="location.href='index.html'">Restart</button>
+                        <button id="view-btn" class="btn btn-info btn-lg mx-auto">View Detailed Result</button>
                         <button id="logout-btn" class="btn btn-danger btn-lg mx-auto" onclick="location.href='signin.html'">Log Out</button>
                     </div>
                 </div>
@@ -91,12 +111,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <footer>
-        <div>&copy;2023 | Website Name</div>
-        <div>All Rights Reserved</div>
-    </footer> -->
-
 
 
     <script src="/JS/script.js"></script>
