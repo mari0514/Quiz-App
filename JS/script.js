@@ -10,6 +10,7 @@ let timer;
 // Main ready functions
 
 $(document).ready(function(){
+    $('#back').hide();
     $('#finish').hide();
     $('#result').hide();
     $('#detailedResult').hide();
@@ -22,6 +23,7 @@ $(document).ready(function(){
     function buttonsManager() {
         if (count > 0) {
             $('#prev').show();
+            $('#back').hide();
             if (count == 4) {
                 $('#next').hide();
                 $('#finish').show();
@@ -136,7 +138,8 @@ $(document).ready(function(){
             addingQuestions(data, count);
             $('#start_page').hide();
             $('#prev').hide();
-            
+            $('#back').show();
+
 
             // timer function
 
